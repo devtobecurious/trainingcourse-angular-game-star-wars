@@ -10,10 +10,14 @@
     "start": "ng serve",
 
     "build:libraries:player": "ng build player",
-    "prebuild": "npm run build:libraries:player",
+    "build:libraries": "npm run build:libraries:player",
+
+    "prebuild": "npm run build:libraries",
     "build": "ng build",
 
-    "test": "ng test",
+    "pretest": "npm run build:libraries",
+    "test": "ng test game-front-end",
+
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
