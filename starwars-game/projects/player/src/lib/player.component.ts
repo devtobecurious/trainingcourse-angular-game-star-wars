@@ -11,12 +11,13 @@ import { Position } from './models/position';
 export class PlayerComponent implements OnInit {
   //#region Fields
   @Input()
-  position!: Position;
+  position: Position = { x: 0, y: 0 };
   //#endregion
 
   constructor() { }
 
   //#region Public methods
+  // TODO: see https://github.com/ngneat/spectator
   ngOnInit(): void {
   }
   //#endregion
